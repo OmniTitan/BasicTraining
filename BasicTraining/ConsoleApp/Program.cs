@@ -1,4 +1,7 @@
-﻿namespace ConsoleApp
+﻿using FizzBuzzSolution;
+using FibonacciSolution;
+
+namespace ConsoleApp
 {
     class Program
     {
@@ -6,7 +9,7 @@
         {
             var upTo = ConsoleIO.GetInt("Please enter a number to do the fibonacci sequence up to");
 
-            var results = FibonacciSolution.Fibonacci.DoFibonacciUpTo(upTo);
+            var results = Fibonacci.DoFibonacciUpTo(upTo);
 
             ConsoleIO.WriteCollection(results);
 

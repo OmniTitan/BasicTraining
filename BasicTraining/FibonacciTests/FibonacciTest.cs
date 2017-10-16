@@ -38,7 +38,9 @@ namespace FibonacciTests
         {
             var results = Fibonacci.DoFibonacciForNValues(20);
 
-            Assert.AreEqual(new List<int> { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765 }, results);
+            Assert.AreEqual(new List<int>
+                { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765 },
+                results);
         }
 
         [Test]
@@ -70,7 +72,9 @@ namespace FibonacciTests
         {
             var results = Fibonacci.DoFibonacciForNValues(200);
 
-            Assert.AreEqual(new List<int> { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 }, results);
+            Assert.AreEqual(new List<int>
+                { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 },
+                results);
         }
 
         [Test]

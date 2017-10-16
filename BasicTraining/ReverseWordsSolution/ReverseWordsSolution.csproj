@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9EDC5870-C24B-45E7-8F5F-C2C0E5700A04}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp</RootNamespace>
-    <AssemblyName>ConsoleApp</AssemblyName>
+    <ProjectGuid>{40BFA045-2B70-46F3-852A-047EDDE08FEC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReverseWordsSolution</RootNamespace>
+    <AssemblyName>ReverseWordsSolution</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,26 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleIO.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ReverseWords.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\FibonacciSolution\FibonacciSolution.csproj">
-      <Project>{7a745744-b60d-43e2-9ec6-4365a5352078}</Project>
-      <Name>FibonacciSolution</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConsoleIO\Core.csproj">
-      <Project>{de045941-fcb8-4b10-a899-6ddd66019308}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FizzBuzzSolution\FizzBuzzSolution.csproj">
-      <Project>{ccee59a1-8279-4841-8b78-c8f8d709f2b0}</Project>
-      <Name>FizzBuzzSolution</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
