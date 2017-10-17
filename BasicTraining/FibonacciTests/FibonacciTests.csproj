@@ -50,7 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\FibonacciSolution\FibonacciSolution.csproj">
+    <ProjectReference Include="..\FibonacciSolution\FibonacciSolution.csproj">
       <Project>{7a745744-b60d-43e2-9ec6-4365a5352078}</Project>
       <Name>FibonacciSolution</Name>
     </ProjectReference>

@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fibonacci", "Fibonacci", "{D9333884-379C-4FB7-AB41-7F00DC49E856}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciSolution", "..\FibonacciSolution\FibonacciSolution.csproj", "{7A745744-B60D-43E2-9EC6-4365A5352078}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciSolution", "FibonacciSolution\FibonacciSolution.csproj", "{7A745744-B60D-43E2-9EC6-4365A5352078}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciTests", "FibonacciTests\FibonacciTests.csproj", "{CCC7B951-9B52-48B1-B2D4-5354C266908D}"
 EndProject
