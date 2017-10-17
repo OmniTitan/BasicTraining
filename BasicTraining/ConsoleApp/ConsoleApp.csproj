@@ -62,6 +62,10 @@
       <Project>{ccee59a1-8279-4841-8b78-c8f8d709f2b0}</Project>
       <Name>FizzBuzzSolution</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PrimeNumbersSolution\PrimeNumbersSolution.csproj">
+      <Project>{e8ca6c4e-abb3-46f8-b1ba-fe76a7b7fba2}</Project>
+      <Name>PrimeNumbersSolution</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PyramidSolution\PyramidSolution.csproj">
       <Project>{07b4656f-26cc-428d-895e-b1a212fc46f2}</Project>
       <Name>PyramidSolution</Name>

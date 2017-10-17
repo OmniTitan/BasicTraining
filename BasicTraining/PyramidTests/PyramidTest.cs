@@ -4,6 +4,7 @@ using System;
 
 namespace PyramidTests
 {
+    [TestFixture]
     public class PyramidTest
     {
         [Test]

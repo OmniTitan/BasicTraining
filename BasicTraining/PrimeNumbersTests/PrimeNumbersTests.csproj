@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8E081655-0211-4658-90E4-874472612FCC}</ProjectGuid>
+    <ProjectGuid>{B8399D36-5FC4-43E7-B2E9-E7D22B55028A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PyramidTests</RootNamespace>
-    <AssemblyName>PyramidTests</AssemblyName>
+    <RootNamespace>PrimeNumbersTests</RootNamespace>
+    <AssemblyName>PrimeNumbersTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -46,20 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PyramidTest.cs" />
+    <Compile Include="PrimeNumbersTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PyramidSolution\PyramidSolution.csproj">
-      <Project>{07b4656f-26cc-428d-895e-b1a212fc46f2}</Project>
-      <Name>PyramidSolution</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+    <ProjectReference Include="..\PrimeNumbersSolution\PrimeNumbersSolution.csproj">
+      <Project>{e8ca6c4e-abb3-46f8-b1ba-fe76a7b7fba2}</Project>
+      <Name>PrimeNumbersSolution</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
