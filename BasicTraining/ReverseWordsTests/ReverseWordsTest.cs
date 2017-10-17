@@ -5,10 +5,10 @@ using System;
 namespace ReverseWordsTests
 {
     [TestFixture]
-    public class FizzBuzzTest
+    public class ReverseWordsTest
     {
         [Test]
-        public void ReversingAWordShouldNotChangeLengthOfWord()
+        public void Reversing_1Word_DoesNotChangeLengthOfWord()
         {
             var result = ReverseWords.Reverse("asdf");
 
@@ -16,7 +16,7 @@ namespace ReverseWordsTests
         }
 
         [Test]
-        public void Reversing1WordShouldReverse()
+        public void Reversing_1Word_ReversesTheWord()
         {
             var result = ReverseWords.Reverse("asdf");
 
@@ -24,7 +24,7 @@ namespace ReverseWordsTests
         }
 
         [Test]
-        public void Reversing2WordsShouldReverseEachWordSeperately()
+        public void Reversing_2Words_ReversesEachWordSeperately()
         {
             var result = ReverseWords.Reverse("Good morning!");
 
@@ -32,7 +32,7 @@ namespace ReverseWordsTests
         }
 
         [Test]
-        public void ReversingAnEmptySentenceShouldReturnAnEmptySentence()
+        public void Reversing_AnEmptySentence_ReturnsAnEmptySentence()
         {
             var result = ReverseWords.Reverse("");
 
@@ -40,7 +40,7 @@ namespace ReverseWordsTests
         }
 
         [Test]
-        public void ReversingANullSentenceShouldThrowAnArgumentNullException()
+        public void Reversing_ANullSentence_ThrowsAnArgumentNullException()
         {
             Assert.Throws<ArgumentNullException>(() => ReverseWords.Reverse(null));
         }

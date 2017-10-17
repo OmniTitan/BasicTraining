@@ -9,7 +9,7 @@ namespace FizzBuzzTests
     public class FizzBuzzTest
     {
         [Test]
-        public void Getting5NumbersShouldReturn5Values()
+        public void PlayingFizzBuzz_With5Numbers_Returns5Values()
         {
             var results = FizzBuzz.PlayFizzBuzzUpTo(5);
 
@@ -17,7 +17,7 @@ namespace FizzBuzzTests
         }
 
         [Test]
-        public void Getting5NumbersShouldMake11235()
+        public void PlayingFizzBuzz_With5Numbers_MakesSequence()
         {
             var results = FizzBuzz.PlayFizzBuzzUpTo(5);
 
@@ -25,7 +25,7 @@ namespace FizzBuzzTests
         }
 
         [Test]
-        public void Getting20NumbersShouldMakeSequence()
+        public void PlayingFizzBuzz_With20Numbers_MakesSequence()
         {
             var results = FizzBuzz.PlayFizzBuzzUpTo(20);
 
@@ -38,7 +38,7 @@ namespace FizzBuzzTests
         }
 
         [Test]
-        public void GettingUpToZeroShouldReturnNoValues()
+        public void PlayingFizzBuzz_With0Numbers_ReturnsNoValues()
         {
             var results = FizzBuzz.PlayFizzBuzzUpTo(0);
 
@@ -46,9 +46,9 @@ namespace FizzBuzzTests
         }
         
         [Test]
-        public void PlayingUpToNegativeValueReturnsNoValues()
+        public void PlayingFizzBuzz_WithNegativeNumberOfNumbers_ReturnsNoValues()
         {
-            var results = FizzBuzz.PlayFizzBuzzUpTo(0);
+            var results = FizzBuzz.PlayFizzBuzzUpTo(-5);
 
             Assert.AreEqual(0, results.Count());
         }

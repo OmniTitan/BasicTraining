@@ -10,7 +10,7 @@ namespace FibonacciTests
     public class FibonacciTest
     {
         [Test]
-        public void Getting5NumbersShouldStartWithTwo1s()
+        public void FibonacciForNNumbers_For5Numbers_StartsWithTwo1s()
         {
             var results = Fibonacci.DoFibonacciForNValues(5);
 
@@ -18,7 +18,7 @@ namespace FibonacciTests
         }
 
         [Test]
-        public void Getting5NumbersShouldReturn5Values()
+        public void FibonacciForNNumbers_For5Numbers_Gets5Values()
         {
             var results = Fibonacci.DoFibonacciForNValues(5);
 
@@ -26,7 +26,7 @@ namespace FibonacciTests
         }
 
         [Test]
-        public void Getting5NumbersShouldMake11235()
+        public void FibonacciForNNumbers_For5Numbers_MakesSequence()
         {
             var results = Fibonacci.DoFibonacciForNValues(5);
 
@@ -34,7 +34,7 @@ namespace FibonacciTests
         }
 
         [Test]
-        public void Getting20NumbersShouldMakeSequence()
+        public void FibonacciForNNumbers_For20Numbers_MakesSequence()
         {
             var results = Fibonacci.DoFibonacciForNValues(20);
 
@@ -44,41 +44,7 @@ namespace FibonacciTests
         }
 
         [Test]
-        public void GettingUpTo1ShouldReturn2Values()
-        {
-            var results = Fibonacci.DoFibonacciUpTo(1);
-
-            Assert.AreEqual(2, results.Count());
-        }
-
-        [Test]
-        public void GettingUpToZeroShouldReturnNoValues()
-        {
-            var results = Fibonacci.DoFibonacciUpTo(0);
-
-            Assert.AreEqual(0, results.Count());
-        }
-
-        [Test]
-        public void GettingUpToNegativeValueShouldReturnNoValues()
-        {
-            var results = Fibonacci.DoFibonacciUpTo(int.MinValue);
-
-            Assert.AreEqual(0, results.Count());
-        }
-
-        [Test]
-        public void GettingUpTo200ShouldMakeSequence()
-        {
-            var results = Fibonacci.DoFibonacciForNValues(200);
-
-            Assert.AreEqual(new List<int>
-                { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 },
-                results);
-        }
-
-        [Test]
-        public void GettingZeroValuesShouldReturnNoValues()
+        public void FibonacciForNNumbers_For0Numbers_ReturnsNoValues()
         {
             var results = Fibonacci.DoFibonacciForNValues(0);
 
@@ -86,7 +52,41 @@ namespace FibonacciTests
         }
 
         [Test]
-        public void GetNthFibonacciValueShouldGet1AtPosition1()
+        public void FibonacciUpToN_UpTo1_Gets2Numbers()
+        {
+            var results = Fibonacci.DoFibonacciUpTo(1);
+
+            Assert.AreEqual(2, results.Count());
+        }
+
+        [Test]
+        public void FibonacciUpToN_UpTo0_Gets0Numbers()
+        {
+            var results = Fibonacci.DoFibonacciUpTo(0);
+
+            Assert.AreEqual(0, results.Count());
+        }
+
+        [Test]
+        public void FibonacciUpToN_UpToNegativeNumber_Gets0Numbers()
+        {
+            var results = Fibonacci.DoFibonacciUpTo(int.MinValue);
+
+            Assert.AreEqual(0, results.Count());
+        }
+
+        [Test]
+        public void FibonacciUpToN_UpTo200_MakesSequence()
+        {
+            var results = Fibonacci.DoFibonacciUpTo(200);
+
+            Assert.AreEqual(new List<int>
+                { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 },
+                results);
+        }
+
+        [Test]
+        public void GetNthFibonacci_1stValue_Gets1()
         {
             var result = Fibonacci.GetNthFibonacciValue(1);
 
@@ -94,7 +94,15 @@ namespace FibonacciTests
         }
 
         [Test]
-        public void GettingNegativeNValueShouldThrowError()
+        public void GetNthFibonacci_2ndValue_Gets1()
+        {
+            var result = Fibonacci.GetNthFibonacciValue(2);
+
+            Assert.AreEqual(1, result);
+        }
+
+        [Test]
+        public void GetNthFibonacci_NegativeN_ThrowsArgumentException()
         {
             Assert.Throws<ArgumentException>(() =>
                 Fibonacci.GetNthFibonacciValue(int.MinValue)
@@ -102,7 +110,7 @@ namespace FibonacciTests
         }
 
         [Test]
-        public void GettingZerothValueShouldThrowError()
+        public void GetNthFibonacci_0thValue_ThrowsArgumentException()
         {
             Assert.Throws<ArgumentException>(() =>
                 Fibonacci.GetNthFibonacciValue(0)
@@ -110,7 +118,7 @@ namespace FibonacciTests
         }
 
         [Test]
-        public void GetNthFibonacciValueShouldGet1597AtPosition17()
+        public void GetNthFibonacci_17thValue_Gets1597()
         {
             var result = Fibonacci.GetNthFibonacciValue(17);
 

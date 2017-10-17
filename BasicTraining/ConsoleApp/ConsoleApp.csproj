@@ -62,6 +62,14 @@
       <Project>{ccee59a1-8279-4841-8b78-c8f8d709f2b0}</Project>
       <Name>FizzBuzzSolution</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RemoveNonNumbersSolution\RemoveNonNumbersSolution.csproj">
+      <Project>{788e2143-2a9f-4b77-b505-da690c8312f5}</Project>
+      <Name>RemoveNonNumbersSolution</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReverseWordsSolution\ReverseWordsSolution.csproj">
+      <Project>{40bfa045-2b70-46f3-852a-047edde08fec}</Project>
+      <Name>ReverseWordsSolution</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

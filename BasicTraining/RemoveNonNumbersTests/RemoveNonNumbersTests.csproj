@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{87540210-EB07-4B16-B27F-F8A570B5C2E0}</ProjectGuid>
+    <ProjectGuid>{C51730B0-B5F6-4865-B3B1-D000FDD3AD64}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ReverseWordsTests</RootNamespace>
-    <AssemblyName>ReverseWordsTests</AssemblyName>
+    <RootNamespace>RemoveNonNumbersTests</RootNamespace>
+    <AssemblyName>RemoveNonNumbersTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -46,13 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReverseWordsTest.cs" />
+    <Compile Include="RemovingNonNumbersTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ReverseWordsSolution\ReverseWordsSolution.csproj">
-      <Project>{40bfa045-2b70-46f3-852a-047edde08fec}</Project>
-      <Name>ReverseWordsSolution</Name>
+    <ProjectReference Include="..\RemoveNonNumbersSolution\RemoveNonNumbersSolution.csproj">
+      <Project>{788e2143-2a9f-4b77-b505-da690c8312f5}</Project>
+      <Name>RemoveNonNumbersSolution</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
