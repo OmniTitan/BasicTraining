@@ -10,6 +10,7 @@ namespace ConsoleApp
         {
             Console.WriteLine(s);
         }
+
         public static void WriteLine(object o)
         {
             Console.WriteLine(o);

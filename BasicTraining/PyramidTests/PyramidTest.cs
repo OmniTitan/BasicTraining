@@ -44,7 +44,7 @@ namespace PyramidTests
    □□□□□□□□□□□□□   
   □□□□□□□□□□□□□□□  
  □□□□□□□□□□□□□□□□□ 
-□□□□□□□□□□□□□□□□□□□", result);
+□□□□□□□□□□□□□□□□□□□".Replace("\n", Environment.NewLine), result);
         }
     }
 }
