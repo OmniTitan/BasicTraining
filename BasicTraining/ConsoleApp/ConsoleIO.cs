@@ -30,9 +30,9 @@ namespace ConsoleApp
             WriteCollection((IEnumerable<string>)collection);
         }
 
-        public static void WriteCollection(params object[] collection)
+        public static void WriteCollection<T>(params T[] collection)
         {
-            WriteCollection((IEnumerable<object>)collection);
+            WriteCollection((IEnumerable<T>)collection);
         }
 
         public static void WriteCollection(IEnumerable<string> collection)
@@ -45,12 +45,12 @@ namespace ConsoleApp
             WriteLine(string.Join(delimiter, collection));
         }
 
-        public static void WriteCollection(IEnumerable<object> collection)
+        public static void WriteCollection<T>(IEnumerable<T> collection)
         {
             WriteCollection(collection.Select(o => o.ToString()));
         }
 
-        public static void WriteCollection(IEnumerable<object> collection, string delimiter)
+        public static void WriteCollection<T>(IEnumerable<T> collection, string delimiter)
         {
             WriteCollection(collection.Select(o => o.ToString()), delimiter);
         }
