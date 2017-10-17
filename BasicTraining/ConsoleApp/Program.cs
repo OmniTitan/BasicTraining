@@ -1,5 +1,4 @@
-﻿using FizzBuzzSolution;
-using FibonacciSolution;
+﻿using FibonacciSolution;
 
 namespace ConsoleApp
 {
