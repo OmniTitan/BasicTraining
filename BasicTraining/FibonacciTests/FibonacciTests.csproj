@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FibonacciTest.cs" />
+    <Compile Include="FibonacciForNTests.cs" />
+    <Compile Include="NthFibonacciTests.cs" />
+    <Compile Include="FibonacciUpToNTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

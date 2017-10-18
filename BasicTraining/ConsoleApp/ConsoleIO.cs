@@ -123,7 +123,7 @@ namespace ConsoleApp
 
             return returnValue;
         }
-        
+
         public static bool YesNo(string question)
         {
             ConsoleKeyInfo keyInfo;
@@ -171,10 +171,18 @@ namespace ConsoleApp
 
         private static string FormatMessage(string message)
         {
-            if (!string.IsNullOrEmpty(message) && !message.EndsWith(" "))
+            if (!string.IsNullOrEmpty(message))
             {
-                // Add a space at the end of the message to seperate the message from the user's response
-                message += ": ";
+                message.Trim();
+
+                if (message.EndsWith(":"))
+                {
+                    message += " ";
+                }
+                else
+                {
+                    message += ": ";
+                }
             }
 
             return message;
