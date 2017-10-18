@@ -71,30 +71,59 @@ namespace ConsoleApp
             Console.ReadKey(true);
         }
 
+        public static string GetString(string message)
+        {
+            message = FormatMessage(message);
+
+            Write(message);
+            return GetString();
+        }
+
         public static int GetInt(string message = null)
         {
-            int returnValue;
+            return Get((s) => int.Parse(s), message);
+        }
+
+        public static T Get<T>(Func<string, T> converter, string message = null)
+        {
+            if (converter == null)
+            {
+                throw new ArgumentNullException(nameof(converter));
+            }
+
+            message = FormatMessage(message);
+
+            T returnValue = default(T);
 
             {
-                bool isNumber;
+                bool isTType;
                 do
                 {
                     if (message != null)
                     {
                         Clear();
 
-                        Write(message + ": ");
+                        Write(message);
                     }
 
                     var valueEntered = GetString();
 
-                    isNumber = int.TryParse(valueEntered, out returnValue);
-                } while (!isNumber);
+                    try
+                    {
+                        returnValue = converter(valueEntered);
+
+                        isTType = true;
+                    }
+                    catch
+                    {
+                        isTType = false;
+                    }
+                } while (!isTType);
             }
 
             return returnValue;
         }
-
+        
         public static bool YesNo(string question)
         {
             ConsoleKeyInfo keyInfo;
@@ -138,6 +167,17 @@ namespace ConsoleApp
             WriteLine(keyInfo.KeyChar);
 
             return keyInfo.Key == ConsoleKey.Y;
+        }
+
+        private static string FormatMessage(string message)
+        {
+            if (!string.IsNullOrEmpty(message) && !message.EndsWith(" "))
+            {
+                // Add a space at the end of the message to seperate the message from the user's response
+                message += ": ";
+            }
+
+            return message;
         }
     }
 }
