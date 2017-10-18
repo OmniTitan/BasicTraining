@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace ConsoleApp
@@ -81,7 +82,22 @@ namespace ConsoleApp
 
         public static int GetInt(string message = null)
         {
-            return Get((s) => int.Parse(s), message);
+            return Get(int.Parse, message);
+        }
+
+        public static long GetLong(string message = null)
+        {
+            return Get(long.Parse, message);
+        }
+
+        public static decimal GetDecimal(string message = null)
+        {
+            return Get(decimal.Parse, message);
+        }
+
+        public static DateTime GetDateTime(string message = null)
+        {
+            return Get(DateTime.Parse, message);
         }
 
         public static T Get<T>(Func<string, T> converter, string message = null)
@@ -96,7 +112,7 @@ namespace ConsoleApp
             T returnValue = default(T);
 
             {
-                bool isTType;
+                bool conversionWorked;
                 do
                 {
                     if (message != null)
@@ -112,13 +128,15 @@ namespace ConsoleApp
                     {
                         returnValue = converter(valueEntered);
 
-                        isTType = true;
+                        conversionWorked = true;
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        isTType = false;
+                        Debug.WriteLine(ex);
+
+                        conversionWorked = false;
                     }
-                } while (!isTType);
+                } while (!conversionWorked);
             }
 
             return returnValue;
