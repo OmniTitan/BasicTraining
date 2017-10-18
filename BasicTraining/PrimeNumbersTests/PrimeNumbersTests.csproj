@@ -46,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PrimeNumbersTest.cs" />
+    <Compile Include="GetFactorsTests.cs" />
+    <Compile Include="GetNPrimesTests.cs" />
+    <Compile Include="GetPrimesUpToNTests.cs" />
+    <Compile Include="IsAPrimeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
