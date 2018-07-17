@@ -9,5 +9,10 @@ namespace FizzBuzzSolution
         {
             throw new NotImplementedException();
         }
+
+        public static IEnumerable<string> PlayFizzBuzz2UpTo(int upTo, IDictionary<int, string> fizzBuzzSettings)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
