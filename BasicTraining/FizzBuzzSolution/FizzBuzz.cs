@@ -41,12 +41,14 @@ namespace FizzBuzzSolution
                 throw new System.ArgumentNullException();
             }
 
+            var sortedKeys = fizzBuzzSettings.Keys.ToList();
+            sortedKeys.Sort();
+
             for (int i = 1; i <= upTo; i++)
             {
                 string currentValue = "";
 
-                var sortedKeys = fizzBuzzSettings.Keys.ToList();
-                sortedKeys.Sort();
+                
 
                 foreach(var item in sortedKeys)
                 {
