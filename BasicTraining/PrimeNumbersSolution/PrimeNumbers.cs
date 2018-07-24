@@ -7,7 +7,21 @@ namespace PrimeNumbersSolution
     {
         public static IEnumerable<int> GetFactors(int factorsOf)
         {
-            throw new NotImplementedException();
+            if(factorsOf < 0)
+            {
+                // Throw the exception.
+            }
+
+            List<int> returnListInts = new List<int>(); 
+            for (int i = 1; i <= factorsOf; i++)
+            {
+                if(factorsOf % i == 0)
+                {
+                    returnListInts.Add(i);
+                }
+            }
+
+            return returnListInts;
         }
 
         public static IEnumerable<int> GetNPrimes(int numberOfPrimesToGet)
