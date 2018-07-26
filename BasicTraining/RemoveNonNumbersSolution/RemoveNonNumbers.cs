@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace RemoveNonNumbersSolution
 {
@@ -6,7 +7,36 @@ namespace RemoveNonNumbersSolution
     {
         public static int Remove(string removeFrom)
         {
-            throw new NotImplementedException();
+            if(removeFrom == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach(char c in removeFrom)
+            {
+                if (char.IsNumber(c))
+                {
+                    sb.Append(c.ToString());
+                }
+            }
+
+            if(sb.Length == 0)
+            {
+                throw new InvalidCastException();
+            }
+
+            try
+            {
+                return Convert.ToInt32(sb.ToString());
+            } catch
+            {
+                throw new InvalidCastException();
+            }
+
+            
         }
     }
 }
