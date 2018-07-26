@@ -13,32 +13,27 @@ namespace ReverseWordsSolution
             }
 
             string[] words = sentence.Split(' ');
-            StringBuilder currentWord;
-            string returnSentence = "";
+            StringBuilder currentWord = new StringBuilder();
 
             int wordCounter = 1;
 
             foreach (string word in words)
             {
                 
-
                 if(wordCounter != 1){
-                    returnSentence = returnSentence + " ";
+                    currentWord.Append(" ");
                 }
-
-                currentWord = new StringBuilder();
+                
                 for(int i = word.Length - 1; i >= 0; i--)
                 {
                     currentWord.Append(word[i]);
                 }
 
-                returnSentence = returnSentence + currentWord.ToString();
-
                 wordCounter++;
 
             }
 
-            return returnSentence;
+            return currentWord.ToString();
         }
     }
 }
