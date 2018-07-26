@@ -9,7 +9,7 @@ namespace PrimeNumbersSolution
         {
             if(factorsOf < 0)
             {
-                // Throw the exception.
+                throw new NotSupportedException();
             }
 
             List<int> returnListInts = new List<int>(); 
@@ -26,17 +26,62 @@ namespace PrimeNumbersSolution
 
         public static IEnumerable<int> GetNPrimes(int numberOfPrimesToGet)
         {
-            throw new NotImplementedException();
+            if(numberOfPrimesToGet < 0)
+            {
+                throw new ArgumentException();
+            }
+
+            List<int> returnListInts = new List<int>();
+            int i = 1;
+            while(returnListInts.Count < numberOfPrimesToGet)
+            {
+                if (IsAPrimeNumber(i))
+                {
+                    returnListInts.Add(i);
+                }
+                i++;
+            }
+
+            return returnListInts;
+
         }
 
         public static IEnumerable<int> GetPrimesUpTo(int upTo)
         {
-            throw new NotImplementedException();
+            List<int> returnListInts = new List<int>();
+
+            for(int i = 1; i <= upTo; i++)
+            {
+                if (IsAPrimeNumber(i))
+                {
+                    returnListInts.Add(i);
+                }
+            }
+            return returnListInts;
         }
 
         public static bool IsAPrimeNumber(int isThisAPrime)
         {
-            throw new NotImplementedException();
+            if(isThisAPrime < 0)
+            {
+                throw new NotSupportedException();
+            }
+
+            if (isThisAPrime == 0 || isThisAPrime == 1)
+            {
+                return false;
+            }
+            
+
+            for (int i = 2; i < isThisAPrime; i++)
+            {
+                if (isThisAPrime % i == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
