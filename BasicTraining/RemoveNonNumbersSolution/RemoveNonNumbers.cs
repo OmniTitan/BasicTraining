@@ -31,7 +31,7 @@ namespace RemoveNonNumbersSolution
             try
             {
                 return Convert.ToInt32(sb.ToString());
-            } catch
+            } catch (OverflowException)
             {
                 throw new InvalidCastException();
             }
