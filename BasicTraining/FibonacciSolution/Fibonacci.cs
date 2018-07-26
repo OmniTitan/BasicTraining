@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FibonacciSolution
 {
@@ -38,12 +39,43 @@ namespace FibonacciSolution
 
         public static IEnumerable<int> DoFibonacciForNValues(int n)
         {
-            throw new NotImplementedException();
+            List<int> returnListInts = new List<int>();
+
+            if(n == 0)
+            {
+                return returnListInts;
+            }
+
+            int last = 1;
+            int beforeLast = 1;
+            int current;
+
+            returnListInts.Add(beforeLast);
+            returnListInts.Add(last);
+
+            for(int i = 3; i <= n; i++)
+            {
+                current = last + beforeLast;
+                beforeLast = last;
+                last = current;
+                returnListInts.Add(current);
+            }
+
+            return returnListInts;
         }
 
         public static int GetNthFibonacciValue(int n)
         {
-            throw new NotImplementedException();
+            if (n <= 0)
+            {
+                throw new ArgumentException();
+            }
+
+            IList<int> fibonacciInts;
+            fibonacciInts = DoFibonacciForNValues(n).ToList<int>();
+
+            return fibonacciInts[fibonacciInts.Count() - 1];
+            
         }
     }
 }
