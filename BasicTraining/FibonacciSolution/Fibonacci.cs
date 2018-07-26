@@ -22,7 +22,7 @@ namespace FibonacciSolution
             returnListInts.Add(1);
             returnListInts.Add(1);
 
-            while (1 > 0)
+            while (true)
             {
                 current = last1 + last2;
                 last2 = last1;
